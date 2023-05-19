@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background2"
     tools:context=".QuestionActivity">
 
     <com.google.android.material.tabs.TabLayout
@@ -12,17 +13,33 @@
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="parent"
         style="@style/Widget.MaterialComponents.TabLayout"
-        android:background="@color/raw_umber" />
+        android:background="@color/statusbar_question" />
 
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/viewPager2"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tabLayout"
-        app:layout_constraintBottom_toBottomOf="parent"/>
+        app:layout_constraintVertical_bias="0.0"
+        tools:layout_editor_absoluteX="28dp" />
+
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="315dp"
+        android:layout_height="20dp"
+        android:max="100"
+        android:progress="0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.977" />
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/logo"
         android:layout_width="226dp"
         android:layout_height="204dp"
         android:contentDescription="Brew Buddy Logo"
@@ -36,18 +53,32 @@
         tools:layout_conversion_absoluteHeight="198dp"
         tools:layout_conversion_absoluteWidth="296dp" />
 
+    <TextView
+        android:id="@+id/introText"
+        android:layout_width="336dp"
+        android:layout_height="143dp"
+        android:layout_marginTop="100dp"
+        android:fontFamily="@font/roboto_bold"
+        android:gravity="center"
+        android:text="We just have a few questions to curate your coffee recommendation"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.374" />
+
     <Button
         android:id="@+id/getStarted"
         android:layout_width="wrap_content"
         android:layout_height="48dp"
+        android:layout_marginTop="200dp"
         android:hint="Get Started"
         android:text="Get Started"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/progressBar"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.578" />
+        app:layout_constraintTop_toTopOf="@+id/logo" />
 
 
 

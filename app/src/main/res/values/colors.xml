@@ -11,6 +11,11 @@
     <color name="mocha_brown">#FF3B270C</color>
     <color name="brown">#FFA47551</color>
     <color name="dark_tan">#FF988558</color>
-    <color name="raw_umber">#FF826644</color>
+    <color name="egg_white">#FFf0ead6</color>
+    <color name="apple_blue">#FF78C5EF</color>
+    <color name="statusbar_main">#FFBA7A57</color>
+    <color name="statusbar_question">#FFF6D1B7</color>
+
+
 
 </resources>

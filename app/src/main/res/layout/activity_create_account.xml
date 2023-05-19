@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     android:autofillHints="password"
     android:background="@drawable/background"
-    android:statusBarColor="@color/egg_white"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
@@ -27,10 +26,12 @@
         app:layout_constraintTop_toBottomOf="@+id/logo"
         app:layout_constraintVertical_bias="0.0" />
 
+
     <EditText
         android:id="@+id/Password"
         android:layout_width="275dp"
         android:layout_height="50dp"
+        android:layout_marginTop="24dp"
         android:autofillHints="password"
         android:ems="10"
         android:fontFamily="@font/roboto"
@@ -41,32 +42,38 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Username"
-        app:layout_constraintVertical_bias="0.048" />
+        app:layout_constraintVertical_bias="0.0" />
 
-    <Button
-        android:id="@+id/login"
-        android:layout_width="wrap_content"
-        android:layout_height="48dp"
-        android:hint="Login"
-        android:text="Login"
+    <EditText
+        android:id="@+id/ConfirmPassword"
+        android:layout_width="275dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="24dp"
+        android:autofillHints="password"
+        android:ems="10"
+        android:fontFamily="@font/roboto"
+        android:hint="Confirm Password"
+        android:inputType="textPassword"
+        android:textColor="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Password"
-        app:layout_constraintVertical_bias="0.083" />
+        app:layout_constraintVertical_bias="0.0" />
 
-    <TextView
-        android:id="@+id/forgotPassword"
+    <Button
+        android:id="@+id/createAccount"
         android:layout_width="wrap_content"
         android:layout_height="48dp"
-        android:clickable="true"
-        android:text="Forgot Password?"
+        android:layout_marginTop="24dp"
+        android:hint="Create Account"
+        android:text="Create Account"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/login"
-        app:layout_constraintVertical_bias="0.044" />
+        app:layout_constraintTop_toBottomOf="@+id/Password"
+        app:layout_constraintVertical_bias="0.233" />
 
     <ImageView
         android:id="@+id/logo"
@@ -82,20 +89,6 @@
         app:layout_constraintVertical_bias="0.085"
         app:srcCompat="@drawable/dark_logo" />
 
-    <TextView
-        android:id="@+id/createAccount"
-        android:layout_width="130dp"
-        android:layout_height="48dp"
-        android:clickable="true"
-        android:onClick="onClick"
-        android:fontFamily="@font/roboto"
-        android:gravity="center"
-        android:text="Create New Account"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/forgotPassword"
-        app:layout_constraintVertical_bias="0.917" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

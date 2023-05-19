@@ -6,6 +6,7 @@ import androidx.fragment.app.FragmentActivity;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 import java.util.ArrayList;
 
+// for use with the QuestionActivity class
 public class ViewPager2Adapter extends FragmentStateAdapter {
 
     // fragments that will be swiped between
