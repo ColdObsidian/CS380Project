@@ -12,10 +12,10 @@
         android:theme="@style/Theme.BrewBuddyCS380"
         tools:targetApi="31">
         <activity
-            android:name=".test"
+            android:name=".RecommendationScreen"
             android:exported="false" />
         <activity
-            android:name=".createAccount"
+            android:name=".CreateAccount"
             android:exported="false" />
         <activity
             android:name=".QuestionActivity"

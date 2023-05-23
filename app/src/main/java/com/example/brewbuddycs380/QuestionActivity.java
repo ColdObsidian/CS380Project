@@ -54,6 +54,9 @@ public class QuestionActivity extends AppCompatActivity {
             titles.add("Q3");
             titles.add("Q4");
             titles.add("Q5");
+            titles.add("Q6");
+            titles.add("Q7");
+            titles.add("S");
             setViewPagerAdapter();
                 new TabLayoutMediator(tabLayout, viewPager2, new TabLayoutMediator.TabConfigurationStrategy() {
                     @Override
@@ -75,7 +78,7 @@ public class QuestionActivity extends AppCompatActivity {
                 ProgressBar progressBar = findViewById(R.id.progressBar);
                 // Set the progress to fill proportional to the fragment
                 // (question 3 is 60% full etc.)
-                progressBar.setProgress((position+1)*20);
+                progressBar.setProgress((position+1)*15);
             }
         });
     }
@@ -88,6 +91,9 @@ public class QuestionActivity extends AppCompatActivity {
         fragmentList.add(new question3());
         fragmentList.add(new question4());
         fragmentList.add(new question5());
+        fragmentList.add(new question6());
+        fragmentList.add(new question7());
+        fragmentList.add(new questionSubmit());
         //sets the data for the adapter
         viewPager2Adapter.setData(fragmentList);
         viewPager2.setAdapter(viewPager2Adapter);

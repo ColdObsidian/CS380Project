@@ -8,42 +8,42 @@
     android:id="@+id/frameLayout">
 
     <ToggleButton
-        android:id="@+id/creamButton"
+        android:id="@+id/foamButton"
         android:layout_width="139dp"
         android:layout_height="64dp"
         android:layout_marginTop="52dp"
         android:checked="false"
         android:text="ToggleButton"
-        android:textOff="A splash of creamer"
-        android:textOn="A splash of creamer"
+        android:textOff="I want some foam"
+        android:textOn="I want some foam"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/question4Text"
+        app:layout_constraintTop_toBottomOf="@+id/question6Text"
         app:layout_constraintVertical_bias="0.0"
         android:background="@drawable/toggle_button_selector" />
 
     <ToggleButton
-        android:id="@+id/blackButton"
+        android:id="@+id/noFoamButton"
         android:layout_width="139dp"
         android:layout_height="64dp"
         android:layout_marginTop="36dp"
         android:background="@drawable/toggle_button_selector"
         android:text="ToggleButton"
-        android:textOff="I'll take it black"
-        android:textOn="I'll take it black"
+        android:textOff="No foam"
+        android:textOn="No foam"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/creamButton"
+        app:layout_constraintTop_toBottomOf="@+id/foamButton"
         app:layout_constraintVertical_bias="0.017" />
 
     <TextView
-        android:id="@+id/question4Text"
+        android:id="@+id/question6Text"
         android:layout_width="359dp"
         android:layout_height="125dp"
         android:fontFamily="@font/roboto_bold"
         android:gravity="center"
-        android:text="Would you like creamer with that?"
+        android:text="And what about milk foam?"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

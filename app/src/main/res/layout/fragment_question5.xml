@@ -8,7 +8,7 @@
     android:id="@+id/frameLayout">
 
     <ToggleButton
-        android:id="@+id/toggleButton"
+        android:id="@+id/decafButton"
         android:layout_width="139dp"
         android:layout_height="64dp"
         android:layout_marginTop="52dp"
@@ -18,12 +18,12 @@
         android:textOn="I'll take decaf"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/question1Text"
+        app:layout_constraintTop_toBottomOf="@+id/question5Text"
         app:layout_constraintVertical_bias="0.0"
         android:background="@drawable/toggle_button_selector" />
 
     <ToggleButton
-        android:id="@+id/toggleButton2"
+        android:id="@+id/caffeineButton"
         android:layout_width="139dp"
         android:layout_height="64dp"
         android:layout_marginTop="36dp"
@@ -34,11 +34,11 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toggleButton"
+        app:layout_constraintTop_toBottomOf="@+id/decafButton"
         app:layout_constraintVertical_bias="0.017" />
 
     <TextView
-        android:id="@+id/question1Text"
+        android:id="@+id/question5Text"
         android:layout_width="359dp"
         android:layout_height="125dp"
         android:fontFamily="@font/roboto_bold"

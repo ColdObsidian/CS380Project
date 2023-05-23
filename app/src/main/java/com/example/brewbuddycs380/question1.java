@@ -1,62 +1,50 @@
 package com.example.brewbuddycs380;
 
 import android.os.Bundle;
+import android.widget.CompoundButton;
+import android.widget.ToggleButton;
 import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import androidx.lifecycle.ViewModelProvider;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link question1#newInstance} factory method to
- * create an instance of this fragment.
- */
 public class question1 extends Fragment {
-
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "testQ1";
-    private static final String ARG_PARAM2 = "teeeestQ1";
-
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
+    private SharedViewModel viewModel;
 
     public question1() {
         // Required empty public constructor
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment question1.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static question1 newInstance(String param1, String param2) {
-        question1 fragment = new question1();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
+        viewModel = new ViewModelProvider(requireActivity()).get(SharedViewModel.class);
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_question1, container, false);
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.fragment_question1, container, false);
+
+        // set a listener on the toggle button
+        ToggleButton icedToggle = view.findViewById(R.id.icedButton);
+        // checks if the toggle is on or off. If on, sets it to on in the SharedViewModel class
+        icedToggle.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                viewModel.setIcedToggle(isChecked);
+            }
+        });
+        // set a listener on the toggle button
+        ToggleButton hotToggle = view.findViewById(R.id.hotButton);
+        // checks if the toggle is on or off. If on, sets it to on in the SharedViewModel class
+        hotToggle.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                viewModel.setHotToggle(isChecked);
+            }
+        });
+
+        return view;
     }
 }

@@ -8,62 +8,75 @@
     android:id="@+id/frameLayout">
 
     <ToggleButton
-        android:id="@+id/darkSweetButton"
+        android:id="@+id/fruityButton"
         android:layout_width="139dp"
         android:layout_height="64dp"
-        android:layout_marginTop="45dp"
         android:background="@drawable/toggle_button_selector"
         android:text="ToggleButton"
-        android:textOff="I like my coffee dark"
-        android:textOn="I like my coffee dark"
+        android:textOff="Fruity"
+        android:textOn="Fruity"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/sweetButton"
-        app:layout_constraintVertical_bias="0.005" />
+        app:layout_constraintTop_toBottomOf="@+id/chocolateButton"
+        app:layout_constraintVertical_bias="0.175" />
 
     <ToggleButton
-        android:id="@+id/sweetButton"
+        android:id="@+id/caramelButton"
         android:layout_width="139dp"
         android:layout_height="64dp"
-        android:layout_marginTop="36dp"
+        android:background="@drawable/toggle_button_selector"
+        android:text="ToggleButton"
+        android:textOff="caramel"
+        android:textOn="Caramel"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fruityButton"
+        app:layout_constraintVertical_bias="0.421" />
+
+    <ToggleButton
+        android:id="@+id/vanillaButton"
+        android:layout_width="139dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="44dp"
         android:background="@drawable/toggle_button_selector"
         android:checked="false"
         android:text="ToggleButton"
-        android:textOff="I have a sweet tooth"
-        android:textOn="I have a sweet tooth"
+        android:textOff="vanilla"
+        android:textOn="vanilla"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/question3Text" />
+        app:layout_constraintTop_toBottomOf="@+id/question7Text" />
 
     <ToggleButton
-        android:id="@+id/mildSweetButton"
+        android:id="@+id/chocolateButton"
         android:layout_width="139dp"
         android:layout_height="64dp"
         android:layout_marginTop="36dp"
         android:background="@drawable/toggle_button_selector"
         android:text="ToggleButton"
-        android:textOff="Mild sweetness please"
-        android:textOn="Mild sweetness please"
+        android:textOff="chocolate"
+        android:textOn="chocolate"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/darkSweetButton"
-        app:layout_constraintVertical_bias="0.017" />
+        app:layout_constraintTop_toBottomOf="@+id/vanillaButton"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
-        android:id="@+id/question3Text"
+        android:id="@+id/question7Text"
         android:layout_width="359dp"
         android:layout_height="125dp"
         android:fontFamily="@font/roboto_bold"
         android:gravity="center"
-        android:text="What is your sweetness preference?"
+        android:text="Would you like any flavored syrups?"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.374" />
+        app:layout_constraintVertical_bias="0.27" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

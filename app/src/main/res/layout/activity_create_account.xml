@@ -10,7 +10,7 @@
     tools:context=".MainActivity">
 
     <EditText
-        android:id="@+id/Username"
+        android:id="@+id/username"
         android:layout_width="275dp"
         android:layout_height="50dp"
         android:layout_marginBottom="356dp"
@@ -28,7 +28,7 @@
 
 
     <EditText
-        android:id="@+id/Password"
+        android:id="@+id/password"
         android:layout_width="275dp"
         android:layout_height="50dp"
         android:layout_marginTop="24dp"
@@ -41,11 +41,11 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Username"
+        app:layout_constraintTop_toBottomOf="@+id/username"
         app:layout_constraintVertical_bias="0.0" />
 
     <EditText
-        android:id="@+id/ConfirmPassword"
+        android:id="@+id/confirmPassword"
         android:layout_width="275dp"
         android:layout_height="50dp"
         android:layout_marginTop="24dp"
@@ -58,7 +58,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Password"
+        app:layout_constraintTop_toBottomOf="@+id/password"
         app:layout_constraintVertical_bias="0.0" />
 
     <Button
@@ -72,7 +72,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Password"
+        app:layout_constraintTop_toBottomOf="@+id/password"
         app:layout_constraintVertical_bias="0.233" />
 
     <ImageView
