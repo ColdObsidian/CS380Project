@@ -1,14 +1,13 @@
 package com.example.brewbuddycs380;
 
+import android.os.Bundle;
+import android.os.StrictMode;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
-import android.os.Bundle;
 
-import java.security.NoSuchAlgorithmException;
-import java.sql.SQLException;
 
 public class CreateAccount extends AppCompatActivity {
 
@@ -38,10 +37,34 @@ public class CreateAccount extends AppCompatActivity {
                 if (username.isEmpty() || password.isEmpty() || confirmPassword.isEmpty()) {
                     // Display toast message asking user to fill in all fields
                     Toast.makeText(getApplicationContext(), "Please fill in all the fields", Toast.LENGTH_SHORT).show();
+<<<<<<< Updated upstream
                     return;
                 }
 
                 if (!password.equals(confirmPassword)) {
+=======
+                } else if (password.equals(confirmPassword)) { // Check if password and confirm password match
+
+                        // Create instance of UserService and attempt to create account
+                    //Toast.makeText(getApplicationContext(), "doing", Toast.LENGTH_SHORT).show();
+
+                        //workaround to get around the networkOnMainThreadException
+                        StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+                        StrictMode.setThreadPolicy(policy);
+                        //endworkaround
+                        GreetClient.test();
+                        //Database.connect();
+                        boolean success = false;//Database.createUser(username, password);
+                        Toast.makeText(getApplicationContext(), "doing"+success, Toast.LENGTH_SHORT).show();
+                        if (success) {
+                            Toast.makeText(getApplicationContext(), "Account created successfully", Toast.LENGTH_SHORT).show();
+                        } else {
+                            Toast.makeText(getApplicationContext(), "Account creation failed", Toast.LENGTH_SHORT).show();
+                        }
+
+
+                } else {
+>>>>>>> Stashed changes
                     // Display toast message indicating passwords do not match
                     Toast.makeText(getApplicationContext(), "Passwords do not match", Toast.LENGTH_SHORT).show();
                     return;
